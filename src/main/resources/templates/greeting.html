@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <ul th:each="person:${persons}">
+        <li>
+            <span th:text="${person.name}">
+            </span>
+            <span th:text="${person.lastName}">
+            </span>
+            <span th:text="${person.age}"></span>
+            <span th:text="${person.moneyInEuros}"></span>
+        </li>
+    </ul>
+<form>
+    <input name="name">
+    <input name="lastName">
+    <input name="age">
+    <input name="moneyInEuros">
+    <input type="submit">
+</form>
+</body>
+</html>
